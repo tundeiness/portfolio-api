@@ -16,8 +16,13 @@ app.use((req, res, next) => {
 })
 
 app.get('/api', (req, res, next) =>{
-  res.send('API Status: Running')
+  res.send('API Status: Running!')
 })
 
 
-app.listen(4040, '0.0.0.0');
+app.post('/api/email', (req, res, next) => {
+  sendGrid.setApiKey('')
+})
+
+
+app.listen(4040, '0.0.0.0');  // app.listen(preffered port, localhost)
