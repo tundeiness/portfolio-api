@@ -20,9 +20,10 @@ app.get('/api', (req, res, next) =>{
   res.send('API Status: Running!')
 })
 
+const key = config.apiKey;
 
 app.post('/api/email', (req, res, next) => {
-  sendGrid.setApiKey(config);
+  sendGrid.setApiKey(key);
   const msg = {
     to:'tundeiness@yahoo.co.uk',
     from: req.body.email,
