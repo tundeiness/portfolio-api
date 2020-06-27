@@ -21,7 +21,7 @@ app.get('/api', (req, res, next) =>{
 
 
 app.post('/api/email', (req, res, next) => {
-  sendGrid.setApiKey('098uytrfd432#45$%6uyTygv89UYTcxzsAW');
+  sendGrid.setApiKey('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');
   const msg = {
     to:'tundeiness@yahoo.co.uk',
     from: req.body.email,
